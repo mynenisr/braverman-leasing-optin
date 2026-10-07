@@ -105,7 +105,7 @@ var FORM_ENDPOINT = "https://formsubmit.co/ajax/mynenisr@gmail.com";
         "You'll get a confirmation text from our leasing number. About 1&ndash;4 messages per week. Message and data rates may apply. " +
         "Reply STOP at any time to opt out, or HELP for help."
       : "<strong>Thanks" + name + "!</strong> We got your inquiry and will follow up by phone call. " +
-        "You did not sign up for text messages, so we won't text you. You can sign up any time on this page or by texting START to our leasing number.";
+        "You did not sign up for text messages, so we won't text you. You can sign up for texts any time on this page.";
     show(thanks, true);
     thanks.focus();
   }
