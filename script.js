@@ -15,6 +15,7 @@
  *   To use another backend (Formspree, Netlify Forms, Google Apps Script, your
  *   own API), put its URL here. It must accept a JSON POST and return 2xx.
  */
+// TODO(leasing-number): replace "our leasing number" below with the new 267 number once purchased.
 var FORM_ENDPOINT = "https://formsubmit.co/ajax/mynenisr@gmail.com";
 
 (function () {
@@ -101,10 +102,10 @@ var FORM_ENDPOINT = "https://formsubmit.co/ajax/mynenisr@gmail.com";
     var name = firstName ? ", " + firstName.replace(/[<>&"]/g, "") : "";
     thanks.innerHTML = consented
       ? "<strong>Thanks" + name + "!</strong> You're signed up for leasing texts from Braverman Building Leasing. " +
-        "You'll get a confirmation text from (866) 785-0982. About 1&ndash;4 messages per week. Message and data rates may apply. " +
+        "You'll get a confirmation text from our leasing number. About 1&ndash;4 messages per week. Message and data rates may apply. " +
         "Reply STOP at any time to opt out, or HELP for help."
       : "<strong>Thanks" + name + "!</strong> We got your inquiry and will follow up by phone call. " +
-        "You did not sign up for text messages, so we won't text you. You can sign up any time on this page or by texting START to (866) 785-0982.";
+        "You did not sign up for text messages, so we won't text you. You can sign up any time on this page or by texting START to our leasing number.";
     show(thanks, true);
     thanks.focus();
   }
