@@ -1,0 +1,127 @@
+/* Braverman Building Leasing - text opt-in site. Plain CSS, no build step. */
+:root {
+  --ink: #1d2433;
+  --muted: #4a5468;
+  --brand: #1f4e79;
+  --brand-dark: #163a5a;
+  --line: #d9dee7;
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --ok-bg: #e9f6ee;
+  --ok-line: #2e7d4f;
+  --err-bg: #fdecec;
+  --err-line: #b3261e;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+}
+a { color: var(--brand); }
+a:hover, a:focus { color: var(--brand-dark); }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 18px; }
+
+header.site {
+  background: var(--brand);
+  color: #fff;
+  padding: 22px 0 18px;
+}
+header.site .brand { font-size: 1.35rem; font-weight: 700; letter-spacing: .2px; margin: 0; }
+header.site .brand a { color: #fff; text-decoration: none; }
+header.site .tag { margin: 2px 0 0; opacity: .9; font-size: .95rem; }
+
+main { padding: 22px 0 8px; }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 10px; }
+h2 { font-size: 1.25rem; margin: 26px 0 8px; }
+h3 { font-size: 1.05rem; margin: 18px 0 6px; }
+p, ul, ol { margin: 0 0 12px; }
+.lead { color: var(--muted); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  margin: 16px 0;
+}
+.units { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 12px 0; }
+@media (min-width: 560px) { .units { grid-template-columns: 1fr 1fr; } }
+.unit { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+.unit h3 { margin: 0 0 4px; }
+.unit p { margin: 0; color: var(--muted); font-size: .95rem; }
+.price { font-weight: 700; color: var(--ink) !important; }
+
+form label { display: block; font-weight: 600; margin: 14px 0 6px; }
+form .hint { display: block; font-weight: 400; color: var(--muted); font-size: .9rem; margin-top: 2px; }
+input[type="text"], input[type="tel"], select {
+  width: 100%;
+  font: inherit;
+  padding: 12px;
+  border: 1px solid #aeb6c4;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+input:focus, select:focus { outline: 3px solid #9cc3e6; outline-offset: 1px; border-color: var(--brand); }
+fieldset { border: 0; padding: 0; margin: 0; }
+
+.consent {
+  margin: 18px 0 6px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fbfcfd;
+}
+.consent label {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 8px;
+  align-items: start;
+  font-weight: 400;
+  margin: 0;
+  font-size: .97rem;
+  color: var(--ink);
+}
+.consent input[type="checkbox"] { width: 22px; height: 22px; margin: 2px 0 0; }
+.consent .optional { display: block; margin: 8px 0 0 36px; font-size: .9rem; color: var(--muted); }
+
+button {
+  margin-top: 16px;
+  width: 100%;
+  font: inherit;
+  font-weight: 700;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--brand);
+  color: #fff;
+  cursor: pointer;
+}
+button:hover, button:focus { background: var(--brand-dark); }
+button[disabled] { opacity: .65; cursor: wait; }
+
+.msg { border-radius: 10px; padding: 14px; margin: 14px 0; }
+.msg.ok { background: var(--ok-bg); border: 1px solid var(--ok-line); }
+.msg.err { background: var(--err-bg); border: 1px solid var(--err-line); }
+.field-error { color: var(--err-line); font-size: .9rem; margin-top: 4px; }
+.hidden { display: none !important; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+.ways li { margin-bottom: 8px; }
+.script { background: #fff; border-left: 4px solid var(--brand); padding: 10px 14px; margin: 10px 0; }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding: 18px 0 28px;
+  font-size: .9rem;
+  color: var(--muted);
+}
+footer.site nav a { margin-right: 14px; }
+.eho { display: flex; gap: 10px; align-items: center; margin-top: 10px; }
+.eho svg { flex: 0 0 auto; }
